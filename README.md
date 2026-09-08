@@ -2,7 +2,7 @@
 
 A simple place to track your journey with God
 
-**[pacewalker14.github.io/My-Testimony-App-Description](https://pacewalker14.github.io/My-Testimony-App-Description/)**
+**[pacewalker14.github.io/Testimony-Journal](https://pacewalker14.github.io/Testimony-Journal/)**
 
 A private notebook for the things worth keeping — what you prayed, what changed, and what you don't want to forget. Everything saves to the phone first, so it works with no signal and nothing waits on a connection. Sign in and a copy is backed up to your own account; or don't, and it never leaves the phone.
 
@@ -33,8 +33,8 @@ There is **no analytics, no advertising, no tracking, and no third-party SDK** w
 
 A journal about faith reveals religious belief, which POPIA treats as *special personal information* and the GDPR covers under Article 9. The app is built around consent: writing in it is the consent, and deleting everything — a single button in the app, which also removes the sign-in record itself — withdraws it.
 
-- [Privacy Policy & Terms](https://pacewalker14.github.io/My-Testimony-App-Description/privacy.html)
-- [Support](https://pacewalker14.github.io/My-Testimony-App-Description/support.html)
+- [Privacy Policy & Terms](https://pacewalker14.github.io/Testimony-Journal/privacy.html)
+- [Support](https://pacewalker14.github.io/Testimony-Journal/support.html)
 
 ## Scripture
 
