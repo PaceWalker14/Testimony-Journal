@@ -1,0 +1,180 @@
+/* Testimony Journal — the app's notebook on a web page.
+ *
+ * Headings are in Caveat, the app's own hand; body copy is not. A privacy
+ * policy in a handwriting face is a privacy policy nobody finishes, and these
+ * pages exist to be read by someone with a real question. */
+
+:root {
+  --page: #f7f4ee;
+  --card: #fffdf8;
+  --ink: #2a1f12;
+  --ink-soft: #7a6a52;
+  --ink-faint: #9a8a72;
+  --accent: #d4874a;
+  --rule: rgba(60, 40, 20, 0.15);
+  --margin-rule: rgba(196, 84, 73, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* The page itself — a sheet of paper with a red margin rule down the side. */
+.sheet {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 34px 30px 30px 34px;
+  box-shadow: 3px 5px 10px rgba(60, 40, 20, 0.07);
+}
+
+@media (min-width: 600px) {
+  .sheet {
+    padding-left: 62px;
+  }
+  .sheet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 44px;
+    width: 1px;
+    background: var(--margin-rule);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: Caveat, 'Segoe Script', cursive;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 44px;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 36px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--rule);
+}
+h3 {
+  font-size: 23px;
+  margin-top: 24px;
+  color: var(--ink-soft);
+}
+
+.sub {
+  font-family: Caveat, 'Segoe Script', cursive;
+  font-size: 22px;
+  color: var(--ink-faint);
+  font-style: italic;
+  margin: 0 0 4px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+strong {
+  font-weight: 650;
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+li {
+  margin-bottom: 7px;
+}
+
+.icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  display: block;
+  margin: 0 auto 14px;
+  box-shadow: 0 3px 10px rgba(60, 40, 20, 0.14);
+}
+
+.center {
+  text-align: center;
+}
+
+.note {
+  color: var(--ink-soft);
+  font-size: 15.5px;
+}
+
+/* A pulled-aside block for the one thing on a page that must not be skimmed. */
+.callout {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: rgba(212, 135, 74, 0.05);
+  padding: 14px 16px;
+  margin: 0 0 18px;
+}
+.callout.warn {
+  border-left-color: #c45449;
+  background: rgba(196, 84, 73, 0.05);
+}
+
+.btn {
+  display: inline-block;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  padding: 9px 18px;
+  margin: 4px 6px 4px 0;
+  font-family: Caveat, 'Segoe Script', cursive;
+  font-size: 21px;
+  color: var(--ink);
+  text-decoration: none;
+  background: rgba(212, 135, 74, 0.08);
+}
+.btn:hover {
+  background: rgba(212, 135, 74, 0.18);
+}
+
+footer {
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 14px;
+  margin-top: 28px;
+}
+footer a {
+  color: var(--ink-faint);
+}
+
+/* The pages are one column of text; nothing here needs to trap horizontal
+   scroll, but a long URL in the contact section would otherwise push the
+   sheet wider than the phone. */
+.break {
+  word-break: break-word;
+}
